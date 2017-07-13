@@ -1,8 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <body>
-   <h1>{{temp.temp}}'F</h1>
-   {% load static %}
-    <img src="{% static "weather/sun.jpg" %}" alt="My image"/>
+    <h1>{{ city.city_name }}</h1>
+    <h3>{{ weather.temp }} F</h3>
+    {% if 'Yes' in weather.cloudy %}
+    <img src="{% static "weather/cloudy.jpeg" %}" style="height: 50px; width: 50px;" alt="My image"/>
+    {% else %}
+    <img src="{% static "weather/sun.jpg" %}" style="height: 50px; width: 50px;" alt="My image"/>
+    {% endif %}
 </body>
 </html>

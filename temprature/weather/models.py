@@ -10,8 +10,7 @@ class City(models.Model):
 
 	def __str__(self):
 		return self.city_name
-	# weather_temp = models.ForeignKey('Weather', on_delete=models.CASCADE)
-	# weather_
+
 
 # Create your models here.
 class Weather(models.Model):
@@ -20,4 +19,4 @@ class Weather(models.Model):
 	cloudy = models.CharField(max_length=20)
 
 	def __str__(self):
-		return self.temp, self.cloudy
+		return str(self.temp)
